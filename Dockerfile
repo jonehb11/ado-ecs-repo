@@ -45,7 +45,7 @@ WORKDIR /azp/
 COPY ./start.sh ./
 
 # Convert CRLF to LF to handle Windows-style line endings, just in case
-#RUN sed -i 's/\r$//' ./start.sh
+RUN sed -i 's/\r$//' ./start.sh
 
 RUN chmod +x ./start.sh
 
